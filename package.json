@@ -1,0 +1,22 @@
+{
+  "name": "muyingzhijia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baiws1314/muyingzhijia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Baiws1314/muyingzhijia/issues"
+  },
+  "homepage": "https://github.com/Baiws1314/muyingzhijia#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
