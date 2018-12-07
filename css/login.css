@@ -1,0 +1,143 @@
+.nav{
+	width: 100%;
+	height: 42px;
+	background: url(../img/top-navbg.png) repeat-x;
+}
+.nav-con{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+.nav-con ul.n-left{
+	float: left;
+	width: 302px;
+	height: 37px;
+	padding-top: 5px;
+}
+.nav-con ul.n-left li{
+	height: 36px;
+	width: 96px;
+	border-right: 1px solid #e7e7e7;
+	text-align: center;
+	line-height: 36px;
+	float: left;
+	font-size: 14px;
+}
+.nav-con li a{
+	color: #333;
+}
+.nav-con ul.n-left li a:hover,.nav-con ul.n-left li.hover a{
+	color: #ff5c00;
+}
+.nav-con ul.n-left li.hover{
+	border-top: 1px solid #E7E7E7;
+	border-left: 1px solid #E7E7E7;
+	background: white;
+}
+.phone{
+	width: 12px;
+	height: 20px;
+	display: block;
+	float: left;
+	margin: 5px 0 0 15px;
+	background: url(../img/sprite27new.png) no-repeat -320px -240px;
+}
+
+.nav-con ul.n-right{
+	float: right;
+	height: 42px;
+}
+.nav-con ul.n-right li{
+	color: #7d7d7d;
+	line-height: 42px;
+	float: left;
+	font-size: 12px;
+}
+.nav-con ul.n-right li:first-child a{
+	color: #FF7800;
+}
+.nav-bg{
+	height: 14px;
+	border-left: 1px solid #ccc;
+	margin: 14px 2px 0 2px;
+}
+.nav-con ul.n-right b{
+	display: inline-block;
+	border-width: 4px;
+	border-color: #666 transparent transparent; 
+	border-style: solid;
+}
+
+.header{
+	width: 100%;
+	height: 95px;
+	border-bottom: 1px solid #d3d3d3;
+}
+.hea-con{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.hea-con h1{
+	width: 268px;
+	height: 80px;
+}
+.hea-con img{
+	width: 150px;
+	height: 55px;
+}
+.login{
+	width: 100%;
+	padding-top: 55px;
+	height: 452px;
+	background: #ececec;
+}
+.log-con{
+	width: 978px;
+	height: 380px;
+	margin: 0 auto;
+	background: white;
+	padding: 40px 10px 10px;
+	border: 1px solid #d3d3d3;
+	position: relative;
+}
+.log-con ul{
+	position: absolute;
+	left: 250px;
+	top: -38px;
+}
+.log-con li{
+	width: 240px;
+	height: 36px;
+	background: #f8f8f8;
+	border: 1px solid #dedede;
+	margin-left: 10px;
+	float: left;
+	text-align: center;
+	line-height: 36px;
+}
+.log-con li.click{
+	background: #fff;
+	border-top: 3px solid #f90;
+}
+.log-con li a{
+	font-size: 14px;
+	color: #979797;
+	font-weight: bold;
+}
+.log-con i{
+	width: 27px;
+	height: 19px;
+	display: inline-block;
+	background: url(../img/register.png) no-repeat -226px -5px;
+}
+.log-con li:first-of-type i{
+	background-position: -290px -5px;
+}
+.log-con li:first-of-type.click i{
+	background-position: -188px -5px;
+}
+.log-con li:last-of-type.click i{
+	background-position: -258px -5px;
+}
