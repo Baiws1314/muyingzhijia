@@ -43,16 +43,18 @@
 	padding: 0 10px 0 40px;
 	float: left;
 	background: url(../img/search-zs.png) no-repeat left center;
+	position: relative;
 }
 .sea-con input{
 	border: 0;
 	background: 0;
-	
+	outline: none;
 	float: left;
 }
 .sea-con #txt{
-	width: 670px;
+	width: 665px;
 	line-height: 58px;
+	padding-left: 5px;
 }
 .sea-con #soso{
 	width: 78px;
@@ -62,6 +64,32 @@
 	color: white;
 	border-radius: 6px;
 	margin-top: 10px;
+}
+.sea-con form #list{
+	width: 790px;
+	border: 2px solid #FF7700;
+	display: none;
+	position: absolute;
+	overflow: hidden;
+	background: #fff;
+	z-index: 100;
+	top: 58px;
+	left: 5px;
+}
+#list li{
+	line-height: 22px;
+	font-size: 12px;
+	padding-left: 8px;
+	
+}
+#list li:hover{
+	background: #FF5C00;
+}
+#list li:hover a{
+	color: white;
+}
+#list li a{
+	color: #666;
 }
 .fenlei{
 	width:50px ;
@@ -166,6 +194,25 @@
 	font-size: 14px;
 	margin-bottom: 30px;
 }
+#banner{
+	width: 1090px;
+	height: 280px;
+	position: relative;
+	overflow: hidden;
+}
+#banner ul{
+	width: 2180px;
+	position: absolute;	
+}
+#banner li{
+	float: left;
+}
+#banner li:first-child{
+	left: 0px;
+}
+#banner li:last-child{
+	left: 1090px;
+}
 .ban-con #banner img{
 	width: 1090px;
 	height: 280px;
@@ -208,18 +255,50 @@
 	height: 460px;
 	margin: 0 auto;
 }
-.re-con .dls{
-	height: ;
+#btns{
+	display: none;
+}
+#btns span{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	font-size: 40px;
+	line-height: 50px;
+	text-align: center;
+	background: #000;
+	opacity: 0.3;
+	z-index: 200;
+	top: 30%;
+	margin-top: -25px;
+	cursor: pointer;
+	color: white;
+}
+#btns span:first-child{
+	left: 20px;
+}
+#btns span:last-child{
+	right: 20px;
+}
+.box{
+	width: 1090px;
+	height: 320px;
 	overflow: hidden;
+	position: relative;
+}
+.re-con .dls{
+	height: 320px;
+	position: absolute;
+}
+.re-con .dls div{
+	width: 1104px;
+	height: 320px;
+	float: left;
 }
 .re-con dl{
 	width: 261px;
 	height: 320px;
 	margin-right: 15px;
 	float: left;
-}
-.re-con a:last-of-type dl{
-	margin-right: 0;
 }
 .re-con dl:hover span{
 	color: #f70;
@@ -364,8 +443,217 @@
 	background: #fff;
 	position: fixed;
 	right: 0;
+	text-align: center;
+	z-index: 1000;
+}
+.fixed i{
+	width: 22px;
+	height: 24px;
+	margin-top: 5px;
+	display: inline-block;
+	background: url(../img/righticon.png);
 }
 .level{
+	width: 100%;
 	height: 36px;
-	background: url(../img/righticon.png) no-repeat 5px 12px;
+	position: absolute;
+	top: 5%;
+	cursor: pointer;
 }
+.erwei:hover,.cart:hover,.top:hover{
+	background: #FF5C00;
+}
+.level:hover i{
+	background-position: 22px 0px;
+}
+.level i{
+	background-position: 0px 0px;
+}
+.level-login,.star-login{
+	width: 293px;
+	height: 162px;
+	background: url(../img/whitearr.png) no-repeat right 10px;
+	box-shadow: -7px 1px 10px rgba(31, 31, 31, 0.21);
+	position: absolute;
+	top: -10px;
+	left: -298px;
+	display: none;
+}
+.level-login div,.star-login div{
+	width: 288px;
+	height: 132px;
+	background: #fff;
+	padding-top: 30px;
+}
+.level-login div span,.star-login div span{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url(../img/rbclose.jpg);
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+.level-login div img,.star-login div img{
+	margin: 0 auto;
+}
+.level-login div p,.star-login div p{
+	font-size: 12px;
+	color: #525261;
+	margin-top: 20px;
+}
+.level-login div p a,.star-login div p a{
+	color: #FF5C00;
+}
+.level div i{
+	display: inline-block;
+	width: ;
+	background: url(../img/userimg.jpg) no-repeat right center;
+}
+.cart{
+	position: absolute;
+	top: 28%;
+}
+.cart:hover i{
+	background-position: 22px -25px;
+}
+.cart:hover a span,.cart:hover a em{
+	color: #fff;
+}
+.cart i{
+	background-position: 0px -25px;
+}
+.cart span{
+	width: 22px;
+	display: inline-block;
+	color: #666;
+	font-size:14px ;
+}
+.cart em{
+	font-style: normal;
+	color: #ff5c00;
+}
+.erwei{
+	width: 100%;
+	height: 36px;
+	position: absolute;
+	top: 48%;
+	text-align: center;
+	cursor: pointer;
+}
+.erwei:hover i{
+	background-position: 22px -50px;
+}
+.erwei i{
+	background-position: 0 -50px;
+}
+.star{
+	width: 100%;
+	height: 36px;
+	position: absolute;
+	top: 56%;
+	text-align: center;
+	cursor: pointer;
+}
+.star:hover i{
+	background-position: 22px -75px;
+}
+.star i{
+	background-position: 0 -75px;
+}
+.serve{
+	width: 100%;
+	height: 78px;
+	position: absolute;
+	top: 65%;
+	text-align: center;
+	cursor: pointer;
+	background: #ff5c00;
+	padding-top: 8px;
+}
+.serve i{
+	background-position: 22px -100px;
+}
+.serve span{
+	font-size: 14px;
+	color: white;
+}
+.serve div,.top div{
+	width: 78px;
+	height: 36px;
+	background: url(../img/whitearr.png) no-repeat right center;
+	box-shadow: -7px 1px 10px rgba(31, 31, 31, 0.21);
+	position: absolute;
+	left: -84px;
+	top: 0px;
+	text-align: center;
+	line-height: 36px;
+	display: none;
+}
+.serve em,.top em{
+	font-style: normal;
+	width: 70px;
+	height: 36px;
+	display: inline-block;
+	background: #fff;
+}
+.top{
+	width: 100%;
+	height: 36px;
+	position: absolute;
+	top: 85%;
+	text-align: center;
+	cursor: pointer;
+}
+.top:hover i{
+	background-position: 22px -130px;
+}
+.top i{
+	background-position: 0px -130px;
+}
+.fixleft{
+	position: fixed;
+    bottom: 20px;
+    left: 10px;
+    z-index: 99;
+    display: none;
+}
+.fixleft .leftImg{
+	background: url(../img/leftFixImg.png) no-repeat;
+    width: 125px;
+    height: 230px;
+    position: relative;
+}
+.fixleft .leftImg a{
+	position: absolute;
+    width: 100px;
+    height: 30px;
+    display: block;
+    left: 13px;
+}
+.fixleft .leftImg a:first-child{
+	top: 50px;
+}
+.fixleft .leftImg a:last-child{
+	top: 86px;
+}
+.fixleft .leftAd{
+	margin-left: 3px;
+}
+.fixleft .leftAd span{
+	position: absolute;
+    left: 100px;
+    border: 1px solid #808080;
+    background-color: #fff;
+    display: block;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 14px;
+}
+.fixleft .leftAd img{
+	width: 106px;
+}
+

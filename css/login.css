@@ -102,12 +102,12 @@
 	border: 1px solid #d3d3d3;
 	position: relative;
 }
-.log-con ul{
+.log-con ul.menu{
 	position: absolute;
 	left: 250px;
 	top: -38px;
 }
-.log-con li{
+.log-con ul.menu li{
 	width: 240px;
 	height: 36px;
 	background: #f8f8f8;
@@ -117,27 +117,130 @@
 	text-align: center;
 	line-height: 36px;
 }
-.log-con li.click{
+.log-con ul.menu li.click{
 	background: #fff;
 	border-top: 3px solid #f90;
 }
-.log-con li a{
+.log-con ul.menu li a{
 	font-size: 14px;
 	color: #979797;
 	font-weight: bold;
 }
-.log-con i{
+.log-con ul.menu i{
 	width: 27px;
 	height: 19px;
 	display: inline-block;
 	background: url(../img/register.png) no-repeat -226px -5px;
 }
-.log-con li:first-of-type i{
+.log-con ul.menu li:first-of-type i{
 	background-position: -290px -5px;
 }
-.log-con li:first-of-type.click i{
+.log-con ul.menu li:first-of-type.click i{
 	background-position: -188px -5px;
 }
-.log-con li:last-of-type.click i{
+.log-con ul.menu li:last-of-type.click i{
 	background-position: -258px -5px;
+}
+#register,#login{
+	display: none;
+	overflow: hidden;
+	width: 50%;
+}
+#register li,#login li{
+	position: relative;
+    line-height: 20px;
+    margin: 0 auto;
+}
+#register label,#login label{
+	font-size: 12px;
+	color: #666;
+	margin: 5px 5px 0 0;
+}
+#register input,#login input{
+	width: 239px;
+    vertical-align: baseline;
+    padding: 3px 4px 3px;
+    padding-right: 30px;
+    height: 20px;
+    font-size: 12px;
+    border-width: 1px;
+    outline: 0 none;
+}
+
+#register #alow,#login #remb{
+	width: auto;
+	height: auto;
+}
+#register p,#login p{
+	width: 200px;
+	margin:10px 0 0 16% ;
+	font-size: 12px;
+	color: #666;
+}
+#register li p,#login li p{
+	margin: 3px 0 0 82px;
+	visibility: hidden;
+	line-height: 16px;
+	font-size: 12px;
+}
+#register p b,#login p b{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url(../img/onError.gif) no-repeat;
+}
+#register p b.suc,#login p b.suc{
+	background: url(../img/onSuccess.gif) no-repeat -2px -3px;
+}
+#register p b.suc~span,#login p b.suc~span{
+	display: none;
+}
+#register i,#login i{
+	position: absolute;
+	width: 34px;
+	height: 28px;
+	display: inline-block;
+	top: -2px;
+	left: 318px;
+	background: url(../dist/img/register.png) no-repeat -120px 0px;
+}
+#register li:nth-child(2) i,#register li:nth-child(3) i,#register li:nth-child(4) i,#login li:nth-child(2) i{
+	background-position: -153px 0px;
+}
+#alow~a{
+	color: #000;
+	font-size: 12px;
+}
+#alow{
+	margin-left: 70px;
+}
+#alow~a:hover{
+	color: #FF5C00;
+}
+#register #btn{
+	width: 228px;
+	height: 40px;
+	background: url(../img/register.png) no-repeat 0px -31px;
+	margin-left: 70px;
+}
+#login{
+	width: 50%;
+	float: right;
+}
+#login li i{
+	left: 292px;
+	top: -3px;
+}
+#login #remb{
+	margin-left: 50px;
+}
+#login #remb~a{
+	color: #20bfff;
+	font-size: 12px;
+}
+#login li:last-child input{
+	width: 229px;
+	height: 40px;
+	background: url(../img/register.png) no-repeat 0 -328px;
+	margin-left: 60px;
 }

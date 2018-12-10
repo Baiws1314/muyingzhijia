@@ -50,37 +50,98 @@
 		</div>
 		<div class="login">
 			<div class="log-con">
-				<ul>
+				<ul class="menu">
 					<li href="#register">
-						<a href="">
+						<a href="login.html?c-register">
 							<i></i>注册
 						</a>
 					</li>
 					<li href="#login">
-						<a href="">
+						<a href="login.html?c-login">
 							<i></i>登录
 						</a>
 					</li>
 				</ul>
 				<div id="register">
-					手机号:<input type="text" /><br /><br />
-					请设置密码:<input type="password" /><br /><br />
-					请确认密码:<input type="password" /><br /><br />
-					请输入验证码:<input type="text" /><div id="yanzheng"></div>
-					<input type="checkbox" />阅读并同意<a href="">"母婴之家网站用户协议"</a><br /><br />
-					<input type="button" value="提交注册" />
+					<ul>
+						<li>
+							<label for="phone">　　　用户名:</label><input id="phone" type="text" placeholder="请输入用户名"/>
+							<p>
+								<b></b>
+								<span>用户名长度为3-10</span>
+							</p>
+							<i></i>
+						</li>
+						<li>
+							<label for="psw">　请设置密码:</label><input id="psw" type="password" placeholder="请输入密码"/>
+							<p>
+								<b></b>
+								<span>密码长度限制为6-20位字符</span>
+							</p>
+							<i></i>
+						</li>
+						<li>
+							<label for="alipsw">　请确认密码:</label><input type="password" id="alipsw" placeholder="请再次输入密码"/>
+							<p>
+								<b></b>
+								<span>2次密码不一致，请重新输入</span>
+							</p>
+							<i></i>
+						</li>
+						<li>
+							<label for="email">　请输入邮箱:</label><input type="text" id="email" placeholder="请输入您常用邮箱"/>
+							<p>
+								<b></b>
+								<span>邮箱格式错误，请重新输入</span>
+							</p>
+							<i></i>
+						</li>
+						<li>
+							<input type="checkbox" id="alow"/><label for="alow">阅读并同意</label><a href="">"母婴之家网站用户协议"</a>
+							<p>
+								<b></b>
+								<span>您还没有同意用户协议</span>
+							</p>
+						</li>
+						<li>
+							<input type="button" id="btn"/>
+						</li>
+					</ul>
 					<p>使用合作网站账号登录母婴之家:</p>
 					<p><a href="">微博</a><a href="">支付宝</a><a href="">QQ</a></p>
 				</div>
 				<div id="login">
-					账户名:<input type="text" /><br /><br />
-					密码:<input type="password" /><br /><br />
-					<input type="checkbox" />记住我(30天免登录)<a href="">忘记密码?</a>
-					<input type="button" value="立即登录" />
+					<ul>
+						<li>
+							<label for="user">账户名:</label><input id="user" type="text" placeholder="请填入用户名"/>
+							<p>
+								<b></b>
+								<span>账户格式不正确!</span>
+							</p>
+							<i></i>
+						</li>
+						<li>
+							<label for="password">　密码:</label><input id="password" type="password" placeholder="请输入密码"/>
+							<p>
+								<b></b>
+								<span>密码长度为6-20位字符</span>
+							</p>
+							<i></i>
+						</li>
+						<li>
+							<input type="checkbox" id="remb"/><label for="remb">记住我(30天免登录)</label><a href="">忘记密码?</a>
+						</li>
+						<li>
+							<input type="button" id="log"/>
+						</li>
+					</ul>
+					
 					<p>使用合作网站账号登录母婴之家:</p>
 					<p><a href="">微博</a><a href="">支付宝</a><a href="">QQ</a></p>
 				</div>
 			</div>
 		</div>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>
