@@ -1,5 +1,15 @@
 $(function($){
-	$(window).scroll(function(){
+	var search=location.search.replace("?","");
+	var token=search.split("&")[1];
+	$(".list-con li").click(function(){
+		location.href=`addcart.html?${token}`;
+	})
+	if(search.split("&")[0]=="c-login"){
+		$(".log-suc").eq(0).before("<li style='color:skyblue'>您好，欢迎登录!</li>");
+		$(".log-suc").remove();
+		$(".level-login,.star-login").find("p").html("您好，母婴之家用户!");	
+	}
+	$(window).scroll(function(){		
 		var scroll=$(this).scrollTop();
 		if(scroll>=200){
 			$(".fixleft").css("display","block");
@@ -104,5 +114,12 @@ $(function($){
 			j=0;
 		}
 		$(".dls").stop().animate({"left":-j*1104});
+	});
+	$(".cart").click(function(){
+		$(".cart-slide").fadeToggle();
+	});
+	$(".level-close").click(function(e){
+		$(".cart-slide").css("display","none");
+		e.stopPropagation();
 	})
 })

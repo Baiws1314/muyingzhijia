@@ -127,6 +127,9 @@ $(function(){
 			.parent().find("p").css("visibility","visible")
 			.find("b").removeClass("suc");
 		}
+		if(getCookie(this.value)){
+			$("#password")[0].value=getCookie(this.value);
+		}
 	})
 	$("#password").blur(function(){
 		var val=$(this).val();
@@ -146,12 +149,38 @@ $(function(){
 			url:"http://47.104.244.134:8080/userlogin.do",
 			async:true,
 			data:{
-				"name":$("#txt").val(),
+				"name":$("#user").val(),
 				"password":$("#password").val()
 			},
-			success:function(){
-				location.href="index.html?c-login";
+			success:function(data){
+				console.log(data);
+				var token=data.data.token;
+				if(data.msg=="OK"){
+					if($("#remb").prop("checked")){
+						setCookie($("#user")[0].value,$("#password")[0].value,30);
+					}
+					location.href=`index.html?c-login&${token}`;
+				}else{
+					alert("用户不存在，请注册后登陆");
+				}
+				
 			}
 		});
 	})
+function getCookie(name){
+	var str = document.cookie;
+	var arr = str.split("; ");
+	for(var i = 0; i < arr.length; i++){
+		var arr1 = arr[i].split("=");
+		if(arr1[0]==name){
+			return arr1[1];
+		}
+	}
+}
+//新建cookie
+function setCookie(name,val,n){
+	var oDate = new Date();
+	oDate.setDate(oDate.getDate()+n);
+	document.cookie = name + "=" + val + ";expires="+ oDate ;
+}
 })

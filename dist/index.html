@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>母婴之家</title>
+		<title>母婴之家首页</title>
 		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 	</head>
@@ -14,16 +14,27 @@
 					<div>
 						<span></span>
 						<img src="img/userimg.jpg"/>
-						<p>您好，母婴之家用户，请<a href="">登录</a> | <a href="">注册</a></p>
+						<p>您好，母婴之家用户，请<a href="login.html?c-login">登录</a> | <a href="login.html?c-register">注册</a></p>
 					</div> 
 				</div>
 			</div>
 			<div class="cart">
-				<a href="">
-					<i></i>
-					<span>购物车</span>
-					<em id="cartNum">(0)</em>
-				</a>
+				<i></i>
+				<span>购物车</span>
+				<em id="cartNum">(0)</em>
+				<div class="cart-slide">
+					<div class="cart-t">
+						<h2>购物车</h2>
+						<span class="level-close"></span>
+					</div>
+					<div class="slide-box">
+						<img src="img/cartdefault.jpg" />
+						<p>您的购物车还是空的<br/>去挑选商品吧~</p>
+					</div>
+					<div class="mayLike">
+						<h2>您可能会喜欢</h2>
+					</div>
+				</div>
 			</div>
 			<div class="clearfix">
 				<div class="erwei">
@@ -32,11 +43,11 @@
 				<div class="star">
 					<i></i>
 					<div class="star-login">
-					<div>
-						<span></span>
-						<img src="img/userimg.jpg"/>
-						<p>您好，母婴之家用户，请<a href="">登录</a> | <a href="">注册</a></p>
-					</div> 
+						<div>
+							<span></span>
+							<img src="img/userimg.jpg"/>
+							<p>您好，母婴之家用户，请<a href="login.html?c-login">登录</a> | <a href="login.html?c-register">注册</a></p>
+						</div> 
 				</div>
 				</div>
 				<div class="serve">
@@ -54,14 +65,24 @@
 				</div>
 			</div>
 		</div>
+		<div class="fixleft">
+			<div class="leftImg">
+				<a href=""></a>
+				<a href=""></a>
+			</div>
+			<div class="leftAd">
+				<span>x</span>
+				<img src="img/20180820122414_10_daohang.png" />
+			</div>
+		</div>
 		<div class="header">
 			<div class="hea-con">
 				<h1><a href="#" target="_blank"><img src="img/logo29new.png"/></a></h1>
 				<ul>
 					<li><a href="">手机版</a></li>
 					<li><a href="">我要开店</a></li>
-					<li><a href="login.html?c-login">登录</a></li>
-					<li><a href="login.html?c-register">注册</a></li>
+					<li class="log-suc"><a href="login.html?c-login" target="_blank">登录</a></li>
+					<li class="log-suc"><a href="login.html?c-register" target="_blank">注册</a></li>
 					<li><a href="">商务合作</a></li>
 					<li><a href="">我的订单</a></li>
 				</ul>
@@ -72,7 +93,7 @@
 				<form>
 					<input type="text" id="txt" placeholder="商品，品类，类别，国家"/>
 					<input type="button" id="soso" value="搜索" />
-					<div></div>
+					<ul id="list"></ul>
 				</form>
 				<div class="fenlei">
 					<a href="">
@@ -89,65 +110,65 @@
 				<h3>合作品牌</h3>
 				<ul>
 					<li>
-						<a href="">
+						
 							<img src="img/wyeth.jpg"/>
-						</a>
+						
 					</li>
 					<li>
-						<a href="">
+						
 							<img src="img/nemans.jpg"/>
-						</a>
+						
 					</li>
 					
 					<li>
-						<a href="">
+						
 							<img src="img/wyeth.jpg"/>
-						</a>
+						
 					</li>
 					<li>
-						<a href="">
+						
 							<img src="img/nemans.jpg"/>
-						</a>
+						
 					</li>
 					<li>
-						<a href="">
+						
 							<img src="img/wyeth.jpg"/>
-						</a>
+						
 					</li>
 					<li>
-						<a href="">
+						
 							<img src="img/nemans.jpg"/>
-						</a>
+						
 					</li>
 					<li>
-						<a href="">
+						
 							<img src="img/wyeth.jpg"/>
-						</a>
+						
 					</li>
 					<li>
-						<a href="">
+						
 							<img src="img/nemans.jpg"/>
-						</a>
+						
 					</li>
 					<li>
-						<a href="">
+						
 							<img src="img/wyeth.jpg"/>
-						</a>
+						
 					</li>
 					<li>
-						<a href="">
+						
 							<img src="img/nemans.jpg"/>
-						</a>
+						
 					</li>
 					<li>
-						<a href="">
+						
 							<img src="img/wyeth.jpg"/>
-						</a>
+						
 					</li>
 					<li>
-						<a href="">
+						
 							<img src="img/nemans.jpg"/>
-						</a>
+						
 					</li>
 				</ul>
 				<p>十五年来合作近千个品牌</p>
@@ -199,43 +220,147 @@
 		<div class="recom">
 			<div class="re-con">
 				<h3>单品推荐</h3>
-				<div class="dls">
-					<a href="">
-						<dl>
-							<dt><img src="img/20180515152137_10_641607.jpg"/></dt>
-							<dd>
-								<p>伊利安慕希原味酸奶</p>
-								<span>伊利安慕希风味酸奶12罐/箱</span>
-							</dd>
-						</dl>
-					</a>
-					<a href="">
-						<dl>
-							<dt><img src="img/20180515152137_10_641607.jpg"/></dt>
-							<dd>
-								<p>伊利安慕希原味酸奶</p>
-								<span>伊利安慕希风味酸奶12罐/箱</span>
-							</dd>
-						</dl>
-					</a>
-					<a href="">
-						<dl>
-							<dt><img src="img/20180515152137_10_641607.jpg"/></dt>
-							<dd>
-								<p>伊利安慕希原味酸奶</p>
-								<span>伊利安慕希风味酸奶12罐/箱</span>
-							</dd>
-						</dl>
-					</a>
-					<a href="">
-						<dl>
-							<dt><img src="img/20180515152137_10_641607.jpg"/></dt>
-							<dd>
-								<p>伊利安慕希原味酸奶</p>
-								<span>伊利安慕希风味酸奶12罐/箱</span>
-							</dd>
-						</dl>
-					</a>
+				<div class="box">
+					<div id="btns">
+						<span>&lt;</span>
+						<span>&gt;</span>
+					</div>
+					<div class="dls">
+						<div>
+						<a href="">
+							<dl>
+								<dt><img src="img/20180515152137_10_641607.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						<a href="">
+							<dl>
+								<dt><img src="img/152957.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						<a href="">
+							<dl>
+								<dt><img src="img/20150717095701_1848_20150717091430_1848_152134.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						<a href="">
+							<dl>
+								<dt><img src="img/20160122143644_44_157231.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						</div>
+						<div>
+						<a href="">
+							<dl>
+								<dt><img src="img/20160204112039_44_102537.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						<a href="">
+							<dl>
+								<dt><img src="img/20160301175821_31_156026.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						<a href="">
+							<dl>
+								<dt><img src="img/20150717095701_1848_20150717091430_1848_152134.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						<a href="">
+							<dl>
+								<dt><img src="img/152957.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						</div>
+						<div>
+						<a href="">
+							<dl>
+								<dt><img src="img/20160204112039_44_102537.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						<a href="">
+							<dl>
+								<dt><img src="img/20180515152137_10_641607.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						</div>
+						<div>
+						<a href="">
+							<dl>
+								<dt><img src="img/20180515152137_10_641607.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						<a href="">
+							<dl>
+								<dt><img src="img/152957.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						<a href="">
+							<dl>
+								<dt><img src="img/20150717095701_1848_20150717091430_1848_152134.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						<a href="">
+							<dl>
+								<dt><img src="img/20160122143644_44_157231.jpg"/></dt>
+								<dd>
+									<p>伊利安慕希原味酸奶</p>
+									<span>伊利安慕希风味酸奶12罐/箱</span>
+								</dd>
+							</dl>
+						</a>
+						</div>
+					</div>
 				</div>
 				<a class="sale" href="">特卖专场</a>
 			</div>
@@ -331,8 +456,7 @@
 					</a>
 				</p>
 			</div>
-		</div>
-		
+		</div>	
 		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 	</body>

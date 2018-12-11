@@ -513,11 +513,12 @@
 .cart{
 	position: absolute;
 	top: 28%;
+	cursor: pointer;
 }
 .cart:hover i{
 	background-position: 22px -25px;
 }
-.cart:hover a span,.cart:hover a em{
+.cart:hover span,.cart:hover em{
 	color: #fff;
 }
 .cart i{
@@ -533,6 +534,73 @@
 	font-style: normal;
 	color: #ff5c00;
 }
+.cart .cart-slide{
+	width: 288px;
+	height: 488px;
+	position: fixed;
+	top: 0;
+	right: 35px;
+	z-index: 100;
+	background: #fff;
+	display: none;
+}
+.cart .cart-slide .cart-t{
+	width: 264px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #eee;
+}
+.cart .cart-slide .cart-t h2{
+	font-size: 14px;
+	float: left;
+	margin-left: 6px;
+	font-weight: normal;
+}
+.cart .cart-slide .cart-t .level-close{
+	cursor: pointer;
+    width: 15px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    overflow: hidden;
+    zoom: 1;
+    background: url(../img/rbclose.jpg) no-repeat;
+}
+.cart .cart-slide .slide-box{
+	width: 288px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: #444;
+}
+.cart .cart-slide .slide-box img{
+	width: 124px;
+    height: 128px;
+    margin: 30px auto 15px;
+}
+.cart .cart-slide .slide-box p{
+	margin-bottom: 15px;
+}
+.cart .cart-slide .mayLike{
+	width: 264px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+} 
+.cart .cart-slide .mayLike h2{
+	font-size: 16px;
+    color: #333;
+    float: left;
+    font-weight: normal;
+} 
 .erwei{
 	width: 100%;
 	height: 36px;

@@ -15,3 +15,93 @@ a{
 html,body{
 	height: 100%;
 }
+.nav{
+	width: 100%;
+	height: 42px;
+	background: url(../img/top-navbg.png) repeat-x;
+}
+.nav-con{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+.nav-con ul.n-left{
+	float: left;
+	width: 302px;
+	height: 37px;
+	padding-top: 5px;
+}
+.nav-con ul.n-left li{
+	height: 36px;
+	width: 96px;
+	border-right: 1px solid #e7e7e7;
+	text-align: center;
+	line-height: 36px;
+	float: left;
+	font-size: 14px;
+}
+.nav-con li a{
+	color: #333;
+}
+.nav-con ul.n-left li a:hover,.nav-con ul.n-left li.hover a{
+	color: #ff5c00;
+}
+.nav-con ul.n-left li.hover{
+	border-top: 1px solid #E7E7E7;
+	border-left: 1px solid #E7E7E7;
+	background: white;
+}
+.phone{
+	width: 12px;
+	height: 20px;
+	display: block;
+	float: left;
+	margin: 5px 0 0 15px;
+	background: url(../img/sprite27new.png) no-repeat -320px -240px;
+}
+
+.nav-con ul.n-right{
+	float: right;
+	height: 42px;
+}
+.nav-con ul.n-right li{
+	color: #7d7d7d;
+	line-height: 42px;
+	float: left;
+	font-size: 12px;
+}
+.nav-con ul.n-right li:first-child a{
+	color: #FF7800;
+}
+.nav-bg{
+	height: 14px;
+	border-left: 1px solid #ccc;
+	margin: 14px 2px 0 2px;
+}
+.nav-con ul.n-right b{
+	display: inline-block;
+	border-width: 4px;
+	border-color: #666 transparent transparent; 
+	border-style: solid;
+}
+
+.header{
+	width: 100%;
+	height: 95px;
+	border-bottom: 1px solid #d3d3d3;
+}
+.hea-con{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.hea-con h1{
+	width: 150px;
+	height: 76px;
+	float: left;
+}
+.hea-con img{
+	width: 150px;
+	height: 55px;
+}

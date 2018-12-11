@@ -202,7 +202,7 @@
 	display: inline-block;
 	top: -2px;
 	left: 318px;
-	background: url(../dist/img/register.png) no-repeat -120px 0px;
+	background: url(../img/register.png) no-repeat -120px 0px;
 }
 #register li:nth-child(2) i,#register li:nth-child(3) i,#register li:nth-child(4) i,#login li:nth-child(2) i{
 	background-position: -153px 0px;
