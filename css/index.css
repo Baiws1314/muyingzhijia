@@ -134,6 +134,7 @@
 .list-con img{
 	width: 100%;
 	height: 100%;
+	cursor: pointer;
 }
 .list-con h3{
 	text-align: center;
@@ -201,21 +202,29 @@
 	overflow: hidden;
 }
 #banner ul{
-	width: 2180px;
 	position: absolute;	
 }
 #banner li{
 	float: left;
 }
-#banner li:first-child{
-	left: 0px;
-}
-#banner li:last-child{
-	left: 1090px;
-}
-.ban-con #banner img{
+#banner img{
 	width: 1090px;
 	height: 280px;
+}
+#ban-num{
+	bottom: 10px;
+	left: 50%;
+}
+#ban-num li{
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	border-radius: 50%;
+	background: rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+#ban-num li:hover,#ban-num li.b-hover{
+	background: darkred;
 }
 .ban-con dl{
 	width: 343px;
@@ -515,22 +524,22 @@
 	top: 28%;
 	cursor: pointer;
 }
-.cart:hover i{
+.cart:hover>i{
 	background-position: 22px -25px;
 }
-.cart:hover span,.cart:hover em{
+.cart:hover>span,.cart:hover>em{
 	color: #fff;
 }
-.cart i{
+.cart>i{
 	background-position: 0px -25px;
 }
-.cart span{
+.cart>span{
 	width: 22px;
 	display: inline-block;
 	color: #666;
 	font-size:14px ;
 }
-.cart em{
+.cart>em{
 	font-style: normal;
 	color: #ff5c00;
 }
@@ -578,13 +587,54 @@
     text-align: center;
     color: #444;
 }
-.cart .cart-slide .slide-box img{
+.slide-box>img{
 	width: 124px;
     height: 128px;
     margin: 30px auto 15px;
 }
-.cart .cart-slide .slide-box p{
+.slide-box>p{
 	margin-bottom: 15px;
+}
+.slide-box ul{
+	padding-left: 12px;
+}
+.slide-box li{ 	
+    padding: 10px 0;
+    border-bottom: 1px dashed #eaeaea;
+    overflow: hidden;
+}
+.slide-box li img{
+	width: 52px;
+	height: 52px;
+	float: left;
+    padding: 2px;
+    border: 1px solid #eaeaea;
+    margin: 0 10px 0 0;
+}
+.slide-box li p{
+	width: 165px;
+    height: 36px;
+    line-height: 18px;
+    color: #666;
+    overflow: hidden;
+    text-align: left;
+}
+.slide-box li div{
+	width: 165px;
+	float: left;
+	text-align: left;
+}
+.slide-box li strong{
+	font-weight: bold;
+    color: #ff5c00;
+}
+.slide-box li em{
+	color: #999;
+}
+.slide-box li span{
+	float: right;
+    color: #ff5c00;
+    font-size: 14px;
 }
 .cart .cart-slide .mayLike{
 	width: 264px;

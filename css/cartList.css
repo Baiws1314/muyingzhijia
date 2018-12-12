@@ -162,11 +162,11 @@
     overflow: hidden;
     cursor: pointer;
 }
-.count-a input{
+.count-a p{
 	height: 24px;
     line-height: 14px;
     border: 1px solid #c8c7cc;
-    line-height: 24px\9;
+    line-height: 24px;
     border-left: 0;
     border-right: 0;
     width: 34px;
@@ -208,4 +208,16 @@
     color: #333;
     cursor: pointer;
     font-size: 12px;
+}
+.cart-box>p{
+	height: 60px;
+	line-height: 60px;
+	text-align: right;
+	color: #666;
+	font-size: 14px;
+	padding-right: 60px;
+}
+.cart-box>p span,.cart-box>p em{
+	color: #DE1010;
+	font-size: 20px;
 }

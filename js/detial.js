@@ -1,5 +1,18 @@
 $(function(){
-	var id=location.search.replace("?","");
+	var search=location.search.replace("?","");
+	var token=search.split("&")[0];
+	var id=search.split("&")[1];
+	if(token!="undefined"){
+		$(".n-right li").eq(0).find("a").css("display","none");
+		$.get("http://47.104.244.134:8080/cartlist.do",{token:token},function(data){
+			console.log(data);
+			var num=0;
+			for(var i=0;i<data.length;i++){
+				num+=data[i].count;
+			}
+			$(".shopCar span").html(num);
+		});
+	}
 	$.get("http://47.104.244.134:8080/goodsbyid.do",{id:id},function(data){
 		console.log(data);
 		$(".jqzoom img,#bigArea img,.spec img").attr("src",data.picurl);
@@ -8,16 +21,26 @@ $(function(){
 		$(".con-price span").html("￥"+data.price);
 		$(".data span").html(data.pubdate);
 		$(".add-goods").click(function(){
-			$.get("http://47.104.244.134:8080/cartsave.do",{gid:id,token:433},function(data){
-				console.log(data);
-				if(data.code==0){
-					var n=Number($(".shopCar span").html())
-					$(".shopCar span").html(n+1);
-				}
-			})
-		})
+			if(token!="undefined"){
+				$.get("http://47.104.244.134:8080/cartsave.do",{gid:id,token:token},function(data){
+					console.log(data);
+					if(data.code==0){
+						var n=Number($(".shopCar span").html())
+						$(".shopCar span").html(n+1);
+					}
+				})
+			}else{
+				location.href="login.html?c-login";
+			}
+		});
 	})
-	
+	$(".shopCar").click(function(){
+		if(token!="undefined"){
+			location.href=`cartList.html?${token}`;
+		}else{
+			location.href="login.html?c-login";
+		}
+	});
 	$(".jqzoom").mouseover(function(){
 		$("#zoom").css("display","block");
 		$("#bigArea").css("display","block");
