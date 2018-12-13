@@ -15,7 +15,7 @@ $(function(){
 			var str="";
 			var count=0,allPrice=0;
 			for(let i in data){
-				str+=`<li id=${data[i].id} gid=${data[i].gid}>
+				str+=`<li id=${data[i].id} gid=${data[i].gid} cart-id=${data[i].goods.id}>
 						<input class="o-check" type="checkbox"/>
 						<a class="pic inblock">
 							<img src="${data[i].goods.picurl}"/>
@@ -53,8 +53,8 @@ $(function(){
 			/*$(".cart-box>p span").html(count);
 			$(".cart-box>p em").html("￥"+allPrice);*/
 			$(".pic,.title").click(function(){
-				var id=$(this).parents("li").attr("id");
-				location.href=`detial.html?${id}`;
+				var goodsId=$(this).parents("li").attr("cart-id");
+				location.href=`detial.html?${token}&${goodsId}`;
 			})
 			$(".add,.minus,.action-o").click(function(e){
 				var target=e.target;
