@@ -33,6 +33,7 @@ $(function(){
 		$(".goods-con").html(str+$(".goods-con").html());
 		$(".goods-con dt,.goos-name").click(function(){
 			var id=$(this).parents("dl").attr("cart-id");
+			console.log($(this).parents("dl"))
 			location.href=`detial.html?${token}&${id}`;
 		})
 		$(".btn-m").click(function(){

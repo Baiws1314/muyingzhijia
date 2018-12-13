@@ -88,15 +88,19 @@
 .action{
 	width: 70px;
 }
+
 .cart-list{
 	font-size: 0;
     border-top: 1px solid #dfdfdf;
-    padding: 8px 0 8px 40px;
+    padding: 8px 0 8px 20px;
     background-color: #fff;
 }
 .cart-list li {
     position: relative;
     margin: 8px 8px 8px 0;
+}
+.cart-list input{
+	margin-right: 5px;
 }
 .cart-list .pic{
 	background-color: #fff;
@@ -220,4 +224,14 @@
 .cart-box>p span,.cart-box>p em{
 	color: #DE1010;
 	font-size: 20px;
+}
+.cart-box .allCheck{
+	height: 30px;
+	line-height: 30px;
+	text-align: left;
+	font-size: 12px;
+}
+.cart-box .allCheck input{
+	float: left;
+	margin: 10px 0 0 20px;
 }

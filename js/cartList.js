@@ -16,6 +16,7 @@ $(function(){
 			var count=0,allPrice=0;
 			for(let i in data){
 				str+=`<li id=${data[i].id} gid=${data[i].gid}>
+						<input class="o-check" type="checkbox"/>
 						<a class="pic inblock">
 							<img src="${data[i].goods.picurl}"/>
 						</a>
@@ -38,19 +39,30 @@ $(function(){
 				allPrice+=data[i].goods.price*data[i].count;
 			}
 			$(".cart-list").html(str);
-			$(".cart-box>p span").html(count);
-			$(".cart-box>p em").html("￥"+allPrice);
+			$("#allCheck").prop("checked",true);
+			$(".o-check").prop("checked",true);
+			var alN=0,alP=0;
+			$(".cart-list li input:checked").each(function(){
+				var count=Number($(this).parents("li").find("p").html());
+				var oAlpri=Number($(this).parents("li").find(".allPrice").html().replace("￥",""));
+				alN+=count;
+				alP+=oAlpri;
+			})
+			$(".cart-box .heji span").html(alN);
+			$(".cart-box .heji em").html("￥"+(alP));
+			/*$(".cart-box>p span").html(count);
+			$(".cart-box>p em").html("￥"+allPrice);*/
 			$(".pic,.title").click(function(){
 				var id=$(this).parents("li").attr("id");
 				location.href=`detial.html?${id}`;
 			})
 			$(".add,.minus,.action-o").click(function(e){
 				var target=e.target;
-				if(e.target.className=="add"){
+				if(target.className=="add"){
 					var num=1;
-				}else if(e.target.className=="minus"){
+				}else if(target.className=="minus"){
 					var num=-1;
-				}else if(e.target.className=="action-o inblock"){
+				}else if(target.className=="action-o inblock"){
 					var num=0;
 				}else{
 					return;
@@ -70,27 +82,54 @@ $(function(){
 					success:function(data){
 						console.log(data);
 						if(data.code==0){
-							var a=Number($(target).parent().find("p").html());
-							$(target).parent().find("p").html(a+num);
-							var n=Number($(".cart-box>p span").html());
-							var p=num*Number($(".pri").html().replace("￥",""));
-							var nowP=Number($(".cart-box>p em").html().replace("￥",""));
-							var oaPri=Number($(target).parent().siblings(".allPrice").html().replace("￥",""))
-							$(target).parent().siblings(".allPrice").html("￥"+(oaPri+p));
-							$(".cart-box>p span").html(n+num);
-							$(".cart-box>p em").html("￥"+(nowP+p));
-							if(a+num<=0){
+							var a=Number($(target).parents("li").find("p").html());
+							var oaPri=Number($(target).parents("li").find(".allPrice").html().replace("￥",""));
+							var n=Number($(".cart-box .heji span").html());
+							var nowP=Number($(".cart-box .heji em").html().replace("￥",""));
+							if(num!=0){
+								$(target).parents("li").find("p").html(a+num);
+								var p=num*Number($(".pri").html().replace("￥",""));
+								$(target).parents("li").find(".allPrice").html("￥"+(oaPri+p));
+								if($(target).parents("li").find("input").prop("checked")){
+									$(".cart-box .heji span").html(n+num);
+									$(".cart-box .heji em").html("￥"+(nowP+p));
+								}
+							}else{
+								if($(target).parents("li").find("input").prop("checked")){
+									$(".cart-box .heji span").html(n-a);
+									$(".cart-box .heji em").html("￥"+(nowP-oaPri));
+								}
+							}
+							//如果数量为0或删除了，就移除节点和后台商品
+							if(a+num<=0 || num==0){
 								$.get("http://47.104.244.134:8080/cartupdate.do",{id:id,gid:gid,num:0,token:token});
 								$(target).parents("li").remove();
 							}
-							
 						}else{
 							alert("操作失败,请重试");
 						}
 					}
 				});
 			})
-			
+			$("#allCheck").click(function(){
+				$(".o-check").prop("checked",$("#allCheck").prop("checked"));
+			})
+			$("#allCheck,.o-check").click(function(){
+				if($(".cart-list").find("input:checked").length==$(".o-check").length){
+					$("#allCheck").prop("checked",true);
+				}else{
+					$("#allCheck").prop("checked",false);
+				}
+				var alN=0,alP=0;
+				$(".cart-list li input:checked").each(function(){
+					var count=Number($(this).parents("li").find("p").html());
+					var oAlpri=Number($(this).parents("li").find(".allPrice").html().replace("￥",""));
+					alN+=count;
+					alP+=oAlpri;
+				})
+				$(".cart-box .heji span").html(alN);
+				$(".cart-box .heji em").html("￥"+(alP));
+			})
 			
 		}
 	});
